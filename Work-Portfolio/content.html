@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Generated Content | Sahiba Chauhan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content-page {
+            text-align: center;
+            padding: 120px 5% 50px;
+        }
+        .ai-image-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        .ai-image-container img {
+            width: 100%;
+            display: block;
+            transition: transform 1s ease;
+        }
+        .ai-image-container:hover img {
+            transform: scale(1.03);
+        }
+        .image-description {
+            max-width: 800px;
+            margin: 2rem auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+        .back-button {
+            margin-top: 2rem;
+        }
+        .glow-effect {
+            position: relative;
+        }
+        .glow-effect::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            opacity: 0;
+            border-radius: 15px;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+            filter: blur(20px);
+        }
+        .glow-effect:hover::before {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#experience">Experience</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-page">
+        <div class="container">
+            <h1>Future Vision</h1>
+            <p class="image-description">
+                This AI-generated artwork represents my vision of the future: a harmonious blend of advanced technology and pristine nature. 
+                Futuristic cities with sustainable architecture coexist with thriving natural ecosystems, 
+                protected by energy shields and connected by advanced transportation systems. 
+                The cosmic backdrop reminds us of our place in the universe and our responsibility to innovate while preserving our planet.
+            </p>
+            
+            <div class="ai-image-container glow-effect">
+                <img src="attached_assets/DALL·E 2025-03-05 10.19.21 - A breathtaking surreal landscape blending advanced technology and untouched nature. A futuristic city with glowing holographic towers, floating digita.png" alt="Futuristic city with nature integration - AI generated artwork">
+            </div>
+            
+            <a href="index.html" class="btn back-button"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sahiba Chauhan Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add scroll animation for the image
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.querySelector('.ai-image-container').classList.add('visible');
+            }, 300);
+        });
+    </script>
+</body>
+</html>
